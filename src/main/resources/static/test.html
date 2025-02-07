@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보호된 페이지</title>
+</head>
+<body>
+<h2>이 페이지는 로그인한 사용자만 접근할 수 있습니다.</h2>
+
+<p>✅ 정상적으로 로그인되었으며, 유효한 JWT 토큰을 보유 중입니다.</p>
+
+<button onclick="logout()">로그아웃</button>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem("jwtToken");
+        if (!token) {
+            alert("❌ 로그인 후 접근 가능합니다.");
+            window.location.href = "/";  // 로그인 페이지로 이동
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem("jwtToken");
+        alert("로그아웃 되었습니다!");
+        window.location.href = "/";
+    }
+</script>
+</body>
+</html>
