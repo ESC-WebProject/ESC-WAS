@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @ResponseBody
 
-public class administratorController {
+public class AdministratorController {
 
     @GetMapping("/administrator/Student_ID")
     public String administrator_Student_ID() {
