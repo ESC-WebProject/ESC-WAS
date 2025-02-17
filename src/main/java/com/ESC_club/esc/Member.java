@@ -2,6 +2,7 @@ package com.ESC_club.esc;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.jpa.repository.Query;
 
 @Entity
 @Getter
@@ -13,7 +14,7 @@ import lombok.*;
 public class Member {
     @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, length = 8, unique = true)
+    @Column(name = "student_id", nullable = false, length = 8, unique = true)
     private int student_id;
 
     @Column(nullable = false)
@@ -46,11 +47,12 @@ public class Member {
     @Column(nullable = false)
     private boolean management_auth;
 
+    @Builder.Default
     @Column(nullable = false)
-    private int accumulated_milleage;
+    private int accumulated_mileage = 0;
 
+    @Builder.Default
     @Column(nullable = false)
-    private int held_mileage;
-
+    private int held_mileage = 0;
 
 }
