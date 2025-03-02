@@ -1,9 +1,7 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.controller;
 
-import com.ESC_club.esc.MileageDTO;
-import com.ESC_club.esc.MileageService;
-import com.ESC_club.esc.MileageRepository;
-import com.ESC_club.esc.Member;
+import com.ESC_club.esc.dto.MileageDTO;
+import com.ESC_club.esc.service.MileageService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,3 +36,4 @@ public class MileageController {
         return ResponseEntity.ok(mileage);
     }
 }
+

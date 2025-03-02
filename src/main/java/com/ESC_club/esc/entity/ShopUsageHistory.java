@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,7 +16,7 @@ public class ShopUsageHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int history_id;
+    private int historyId;
 
     @ManyToOne
     @JoinColumn(nullable = false)
@@ -26,7 +26,7 @@ public class ShopUsageHistory {
     @JoinColumn(nullable = false)
     private Member student;
 
-    private LocalDateTime exchange_request_date;
+    private LocalDateTime exchangeRequestDate;
 
 
 }

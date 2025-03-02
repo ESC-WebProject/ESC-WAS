@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.dto;
 
 import lombok.Getter;
 import lombok.Setter;
