@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,18 +14,19 @@ public class MileageShop {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long product_id;
+    private Long productId;
 
     @Column(nullable = false)
-    private String product_name;
+    private String productName;
+
     @Column(nullable = false)
-    private String product_count;
+    private int productCount;
 
-    private String product_description;
+    private String productDescription;
 
-    private String product_photo;
+    private String productPhoto;
 
-    private int product_price;
+    private int productPrice;
 
 
 
