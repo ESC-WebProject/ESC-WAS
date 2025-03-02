@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

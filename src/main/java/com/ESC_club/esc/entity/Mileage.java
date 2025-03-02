@@ -1,8 +1,7 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
@@ -17,15 +16,15 @@ public class Mileage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long mileage_count;
+    private Long mileageCount;
 
 
     @Column(nullable = false)
-    private LocalDateTime accual_date;
+    private LocalDateTime accualDate;
 
-    private String accrual_place;
-    private LocalDateTime usage_date;
-    private int validity_period;
+    private String accrualPlace;
+    private LocalDateTime usageDate;
+    private int validityPeriod;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false)
