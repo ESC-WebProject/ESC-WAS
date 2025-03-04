@@ -1,8 +1,7 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 

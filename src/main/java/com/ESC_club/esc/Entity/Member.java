@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,15 +12,14 @@ import lombok.*;
 @Builder
 public class Member {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, length = 8, unique = true)
-    private int student_id;
+    private int studentId;
 
     @Column(nullable = false)
     private String pwd;
 
     @Column(nullable = false)
-    private String Student_Name;
+    private String studentName;
 
     @Column(nullable = false)
     private String department;
@@ -28,29 +27,29 @@ public class Member {
     @Column(nullable = false)
     private String major;
 
-    @Column(nullable = false)
-    private String phone_number;
+    @Column(nullable = true)
+    private String phoneNumber;
 
     @Column(nullable = false, length = 1)
     private int grade;
 
-    @Column(nullable = false)
-    private String image_path;
+    @Column(nullable = true)
+    private String imagePath;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String email;
 
-    @Column(nullable = false)
-    private boolean enrollment_status;
+    @Column(nullable = false)//재학 or 졸업여부, false면 재학 중 true면 졸업
+    private boolean enrollmentStatus;
+
+    @Column(nullable = false)//관리자 권한이면 true
+    private boolean managementAuth;
 
     @Column(nullable = false)
-    private boolean management_auth;
+    private int accumulatedMileage;
 
     @Column(nullable = false)
-    private int accumulated_milleage;
-
-    @Column(nullable = false)
-    private int held_mileage;
+    private int heldMileage;
 
 
 }

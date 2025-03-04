@@ -1,4 +1,4 @@
-package com.ESC_club.esc;
+package com.ESC_club.esc.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
