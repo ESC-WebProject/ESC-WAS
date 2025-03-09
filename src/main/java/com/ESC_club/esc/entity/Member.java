@@ -28,16 +28,16 @@ public class Member {
     @Column(nullable = false)
     private String major;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String phoneNumber;
 
     @Column(nullable = false, length = 1)
     private int grade;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String imagePath;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String email;
 
     @Column(nullable = false)
