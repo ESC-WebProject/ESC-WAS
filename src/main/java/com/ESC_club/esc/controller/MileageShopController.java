@@ -18,8 +18,8 @@ public class MileageShopController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<String> addProduct(@RequestBody MileageShopDTO productDTO) {
-        mileageShopService.addProduct(productDTO);
+    public ResponseEntity<String> addProduct(@RequestBody MileageShopDTO mileageShopDTO) {
+        mileageShopService.addProduct(mileageShopDTO);
         return ResponseEntity.ok("Product added successfully.");
     }
 
@@ -30,8 +30,8 @@ public class MileageShopController {
     }
 
     @PutMapping("/update/{productId}")
-    public ResponseEntity<String> updateProduct(@PathVariable Long productId, @RequestBody MileageShopDTO productDTO) {
-        mileageShopService.updateProduct(productId, productDTO);
+    public ResponseEntity<String> updateProduct(@PathVariable Long productId, @RequestBody MileageShopDTO mileageShopDTO) {
+        mileageShopService.updateProduct(productId, mileageShopDTO);
         return ResponseEntity.ok("Product updated successfully.");
     }
 
